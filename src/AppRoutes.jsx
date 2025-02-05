@@ -4,7 +4,7 @@ import { Route, Routes } from 'react-router-dom'; // Use Routes instead of Switc
 import HomePage from './Components/HomePage';  // Adjust the import path as needed
 import CoursesSection from './Components/CoursesSection'  // Adjust the import path as needed
 import Login from './Components/Login'  // Adjust the import path as needed
-import AboutUs from './Components/aboutUs';
+import AboutUs from './Components/AboutUs';
 
 const AppRoutes = () => {
   return (
