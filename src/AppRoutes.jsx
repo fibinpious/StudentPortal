@@ -8,7 +8,7 @@ import AboutUs from './Components/AboutUs';
 
 const AppRoutes = () => {
   return (
-    <Router basename='https://studentdemoportal.netlify.app/'>
+    <Router basename='https://studentdemoportal.netlify.app/home'>
       <Routes>
         <Route path="/" element={<Login />} />  {/* Use 'element' prop with JSX */}
         <Route path="/home" element={<HomePage />} />  {/* Use 'element' prop with JSX */}
