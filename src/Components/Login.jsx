@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import './Login.css'; 
 import Google from '../assets/Google.jpg'
-import Facebook from '../assets/Facebook.jpg'
+import Facebook from '../assets/facebook.jpg'
 import LoginImage from '../assets/LoginImage.jpg'
 import { useNavigate } from 'react-router-dom';
 
