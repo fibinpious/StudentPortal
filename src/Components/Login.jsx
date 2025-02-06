@@ -1,93 +1,66 @@
-import React from 'react';
-import { useState } from 'react';
-import './Login.css'; 
-import Google from '../assets/Google.jpg'
-import Facebook from '../assets/facebook.jpg'
-import LoginImage from '../assets/LoginImage.jpg'
-import { useNavigate } from 'react-router-dom';
+import {React,useState} from "react";
+import "./Login.css"; // Importing CSS
+import newLogin from "../assets/newLogin.jpg";
+import bg1 from "../assets/bg1.png";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
-
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
+    const[username,setUsername]=useState("");
+    const[password,setPassword]=useState("");
     const navigate = useNavigate();
 
-    const handleLogin = () => {
-        console.log('Username:', username);
-        console.log('Password:', password);
-        if(username === 'admin' && password === 'password') {
-            navigate('/home');
+    const handleLogin=()=>{
+        console.log("Username:",username);
+        console.log("Password:",password);
+        if(username==="admin" && password==="admin"){
+            navigate("/student");
         }else{
-            alert('Invalid credentials');
+            alert("Login Failed");
         }
     }
+
   return (
     <div className="login-container">
       <div className="login-box">
-        {/* Left side - Illustration */}
-        <div className="illustration-container">
+        {/* Left side - Image */}
+        {/* <div className="illustration-container">
           <img
-            src={LoginImage}
-            alt="Illustration"
+            src={bg1} // Replace with your image path
+            alt="Student Portal"
             className="illustration"
           />
-        </div>
+        </div> */}
 
         {/* Right side - Login Form */}
         <div className="login-form">
-          <h2 className="login-title">Student Login</h2>
+          <h2 className="login-title">Login</h2>
           <p className="login-subtitle">
             Hey, enter your details to sign in to your account
           </p>
-
           <div className="form-group">
-            {/* Username / Email Input */}
             <input
-              type="text"
-              placeholder="Enter your username/email"
+              type="email"
               className="input-field"
+              placeholder="Enter your Email"
               value={username}
-              onChange={(e) => setUsername(e.target.value)}
+              onChange={(e)=>setUsername(e.target.value)}
             />
-
-            {/* Password Input */}
             <input
               type="password"
-              placeholder="Enter your password"
               className="input-field"
+              placeholder="Enter your Password"
               value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              onChange={(e)=>setPassword(e.target.value)}
             />
-
-            <button className="primary-btn" onClick={handleLogin}>Login In</button>
-
-            <div className="flex items-center justify-between w-full text-sm text-gray-500">
-              <p>Or sign in with</p>
-              <div className="social-btns">
-                <button className="social-btn">
-                  <img
-                    src={Google}
-                    alt="Google"
-                    className="w-5 h-5"
-                  />
-                </button>
-                <button className="social-btn">
-                  <img
-                    src={Facebook}
-                    alt="Facebook"
-                    className="w-5 h-5"
-                  />
-                </button>
-              </div>
-            </div>
-
-            <p className="sign-up-link mt-4">
-              Don't have an account?{' '}
-              <a href="/signup" className="text-blue-600 hover:underline">
-                Sign Up Now
-              </a>
-            </p>
+            <button className="primary-btn" onClick={handleLogin}>Login</button>
           </div>
+          <div className="social-btns">
+            <button className="social-btn">Google</button>
+            <button className="social-btn">Facebook</button>
+          </div>
+          <p className="sign-up-link">
+            Don't have an account? <a href="#">Sign Up Now</a>
+          </p>
         </div>
       </div>
     </div>

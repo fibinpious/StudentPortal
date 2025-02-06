@@ -1,5 +1,6 @@
 .courses-section {
-    background-color: #F9F6EF;
+    background: url('/src/assets/bg5.jpg');
+    background-size: cover;
     padding: 4rem 0;
     text-align: center;
     min-height: 100vh;
