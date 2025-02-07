@@ -64,4 +64,19 @@
   .cta-btn:hover {
     background-color: #0056b3;
   }
+
+  .back{
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+   float: right;
+  }
+
+  .back:hover {
+    background-color: #0056b3;
+  }
   

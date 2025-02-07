@@ -3,8 +3,13 @@ import './CoursesSection.css';
 import image1 from '../assets/image1.jpg';
 import image2 from '../assets/image2.jpg';
 import image3 from '../assets/image3.jpg';
+import { useNavigate } from 'react-router-dom';
 
 const CoursesSection = () => {
+  const navigate = useNavigate();
+  const handleBack = () => {
+    navigate('/');
+  };
   return (
     <div className="courses-section">
       <div className="courses-header">
@@ -36,6 +41,11 @@ const CoursesSection = () => {
           <p>Law</p>
           <button>GO TO →</button>
         </div>
+      </div>
+      <div className="back-button-container">
+        <button className="course-button back-button" onClick={handleBack}>
+            BACK
+        </button>
       </div>
     </div>
   );

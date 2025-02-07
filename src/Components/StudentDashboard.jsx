@@ -1,11 +1,13 @@
 // StudentDashboard.jsx
 import React from 'react';
-import { Search, Bell, Settings, BookOpen, Users, CreditCard, Home } from 'lucide-react';
+import { Search, Bell, Settings, BookOpen, Users, CreditCard, Home, LogOut } from 'lucide-react';
 import './StudentDashboard.css';
 import Calendar from 'react-calendar'
 import 'react-calendar/dist/Calendar.css';
+import { useNavigate } from 'react-router-dom';
 
 const StudentDashboard = () => {
+  const navigate = useNavigate();
   const courses = [
     { name: 'Graphic Fundamentals - ART101', subtitle: 'Design Studio', colorClass: 'purple' },
     { name: 'Advanced Web Design - FED201', subtitle: 'Tuesday & Thursday', colorClass: 'yellow' },
@@ -23,6 +25,10 @@ const StudentDashboard = () => {
     'Advanced Web Design - Wireframe',
     'User Experience Research - Case Study'
   ];
+
+  const handleSignOut = () => {
+    navigate('/');
+  }
 
   return (
     <div className="dashboard-container">
@@ -68,11 +74,19 @@ const StudentDashboard = () => {
                   Account Settings
                 </a>
               </li>
+              <li className="sign-out">
+                <a href="#" className="nav-link" onClick={(e) => {
+                  e.preventDefault();
+                  handleSignOut();
+                }}>
+                  <LogOut size={20} />
+                  Sign Out
+                </a>
+              </li>
             </ul>
           </nav>
         </div>
       </aside>
-
       {/* Main Content */}
       <main className="main-content">
         <header className="main-header">

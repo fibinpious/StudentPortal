@@ -1,7 +1,12 @@
 import React from 'react';
 import './AboutUs.css'; // Create a CSS file to style this page
+import { useNavigate } from 'react-router-dom';
 
 const AboutUs = () => {
+  const navigate = useNavigate();
+  const handleBack = () => {
+    navigate('/');
+  };
   return (
     <div className="about-us-container">
       <div className="about-us-header">
@@ -59,6 +64,7 @@ const AboutUs = () => {
             creators. Together, we'll bring your ideas to life!
           </p>
           <button className="cta-btn">Get Started</button>
+          <button className="back"onClick={handleBack}>Back</button>
         </section>
       </div>
     </div>

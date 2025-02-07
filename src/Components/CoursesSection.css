@@ -1,5 +1,5 @@
 .courses-section {
-    background: url('/src/assets/bg5.jpg');
+    background: url('/src/assets/bg6.png');
     background-size: cover;
     padding: 4rem 0;
     text-align: center;
@@ -71,3 +71,59 @@
   .course-card button:hover {
     background-color: #333;
   }
+  
+/* Existing container styles remain unchanged */
+.back-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Updated button styles */
+.course-button.back-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  padding: 0.8rem 1.5rem;
+  background: transparent;
+  border: 2px solid #000;
+  border-radius: 5px;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.course-button.back-button::before {
+  content: "←";
+  margin-right: 8px;
+  transition: transform 0.3s ease;
+}
+
+.course-button.back-button:hover {
+  background: #000;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.course-button.back-button:hover::before {
+  transform: translateX(-3px);
+}
+
+.course-button.back-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .course-button.back-button {
+    min-width: 100px;
+    padding: 0.7rem 1.2rem;
+  }
+}
