@@ -1,4 +1,4 @@
-import React from 'react';
+import {React, useEffect, useState} from 'react';
 import './HomePage.css';
 import HomePageImage from '../assets/HomePageImage.jpg';
 import { useNavigate } from 'react-router-dom';

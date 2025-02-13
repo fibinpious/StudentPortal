@@ -4,6 +4,7 @@
     padding: 4rem 0;
     text-align: center;
     min-height: 100vh;
+    background:rgba(255,255,255,0.8);
   }
   
   .courses-header h2 {

@@ -22,16 +22,6 @@ const Login = () => {
   return (
     <div className="login-container">
       <div className="login-box">
-        {/* Left side - Image */}
-        {/* <div className="illustration-container">
-          <img
-            src={bg1} // Replace with your image path
-            alt="Student Portal"
-            className="illustration"
-          />
-        </div> */}
-
-        {/* Right side - Login Form */}
         <div className="login-form">
           <h2 className="login-title">Login</h2>
           <p className="login-subtitle">

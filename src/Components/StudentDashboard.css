@@ -111,7 +111,7 @@
   
   /* Welcome Section */
   .welcome-section {
-    background-color: #7c3aed;
+    background-color: #a59fc4;
     color: white;
     padding: 32px;
     border-radius: 12px;
@@ -195,15 +195,15 @@
   }
   
   .course-card.purple { 
-    background: linear-gradient(135deg, #d8b2f4, #c49ade); 
+    background: #9cbaa4; 
   }
   
   .course-card.yellow { 
-    background: linear-gradient(135deg, #fce6a1, #f9d57a); 
+    background: #c1e3e8; 
   }
   
   .course-card.blue { 
-    background: linear-gradient(135deg, #a8d0f3, #88bde5); 
+    background: #d4c19b; 
   }
   
   .course-card.green { 

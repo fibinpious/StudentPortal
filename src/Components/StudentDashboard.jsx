@@ -63,9 +63,12 @@ const StudentDashboard = () => {
                 </a>
               </li>
               <li>
-                <a href="#" className="nav-link">
+                <a href="#" className="nav-link" onClick={(e) => {
+                  e.preventDefault();
+                  navigate('/incidents');
+                }}>
                   <CreditCard size={20} />
-                  Finance
+                  Incidents
                 </a>
               </li>
               <li>
